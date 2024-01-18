@@ -14,6 +14,7 @@ import (
 
 type Service interface {
 	Health() map[string]string
+	Db() *sql.DB
 }
 
 type service struct {
@@ -42,6 +43,10 @@ func New() Service {
 
 	s := &service{db: db}
 	return s
+}
+
+func (s *service) Db() *sql.DB {
+	return s.db
 }
 
 func (s *service) Health() map[string]string {

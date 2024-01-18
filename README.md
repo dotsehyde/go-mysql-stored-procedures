@@ -1,6 +1,6 @@
 # Project store-procedures-mysql
 
-One Paragraph of project description goes here
+A simple web server that connects to a mysql database and executes stored procedures.
 
 ## Getting Started
 
